@@ -14,7 +14,7 @@ body {
   flex-flow: column;
   height: 100vh;
 }
-
+/* this Class come from calendar component elements when already displayed in the browser */
 .rbc-calendar {
   height: 100%;
 }
