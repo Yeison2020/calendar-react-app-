@@ -1,7 +1,11 @@
 import React from "react";
 
 const CalendarScreen = () => {
-  return <div>CalendarScree</div>;
+  return (
+    <div>
+      <h1>CalendarScree</h1>
+    </div>
+  );
 };
 
 export default CalendarScreen;
