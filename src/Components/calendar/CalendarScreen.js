@@ -4,6 +4,7 @@ import "../../index.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import { messages } from "../../helpers/calendar-messages-es";
 const localizer = momentLocalizer(moment);
 const events = [
   {
@@ -23,6 +24,7 @@ const CalendarScreen = () => {
         events={events}
         startAccesor="start"
         endAccesor="end"
+        messages={messages}
       />
     </div>
   );
