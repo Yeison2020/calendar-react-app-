@@ -22,6 +22,17 @@ const events = [
 const CalendarScreen = () => {
   const eventStyleGetter = (event, start, end, isSeleected) => {
     console.log(event, start, end, isSeleected);
+    const style = {
+      backgroundColor: "#367CF7",
+      borderRadius: "0px",
+      opacity: 0.8,
+      display: "block",
+      color: "white",
+    };
+
+    return {
+      style,
+    };
   };
   return (
     <div className="calendar-screen">
