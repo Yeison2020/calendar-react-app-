@@ -1,7 +1,7 @@
 import React from "react";
 
-const CalendarScree = () => {
+const CalendarScreen = () => {
   return <div>CalendarScree</div>;
 };
 
-export default CalendarScree;
+export default CalendarScreen;
