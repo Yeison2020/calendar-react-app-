@@ -1,7 +1,9 @@
 import React from "react";
 import NavBar from "../ui/NavBar";
+import "../../index.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 const localizer = momentLocalizer(moment);
 const events = [
   {
@@ -14,7 +16,7 @@ const events = [
 
 const CalendarScreen = () => {
   return (
-    <div>
+    <div className="calendar-screen">
       <NavBar />
       <Calendar
         localizer={localizer}
