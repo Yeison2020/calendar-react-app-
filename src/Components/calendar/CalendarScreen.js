@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../ui/NavBar";
+import CalendarEvent from "./CalendarEvent";
 import "../../index.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
@@ -44,6 +45,7 @@ const CalendarScreen = () => {
         endAccesor="end"
         messages={messages}
         eventPropGetter={eventStyleGetter}
+        components={{ event: CalendarEvent }}
       />
     </div>
   );
