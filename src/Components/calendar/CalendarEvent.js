@@ -1,10 +1,11 @@
 import React from "react";
 
 const CalendarEvent = ({ event }) => {
-  console.log(event);
+  const { title, name } = event;
   return (
     <div>
-      <span>Learning React</span>
+      <h6>{title}</h6>
+      <strong>{name}</strong>
     </div>
   );
 };
