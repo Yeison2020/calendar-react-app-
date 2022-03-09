@@ -31,6 +31,7 @@ const CalendarModal = () => {
       contentLabel="Example Modal"
       className="modal"
       overlayClassName="modal-fondo"
+      closeTimeoutMS={200}
     >
       <h1>Hello World</h1>
       <hr />
