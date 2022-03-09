@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../ui/NavBar";
 import CalendarEvent from "./CalendarEvent";
 import "../../index.css";
@@ -40,6 +40,12 @@ const CalendarScreen = () => {
     };
   };
 
+  // States in my local storage from lastView
+
+  const [lastView, setLastView] = useState(
+    localStorage.getItem("lastView") || "month"
+  );
+
   // Here those events help me to extract my current location or If I'm editing my files at that location.
   const onDoubleClick = (e) => {
     console.log(e);
@@ -49,7 +55,8 @@ const CalendarScreen = () => {
   };
 
   const onViewChange = (e) => {
-    console.log(e);
+    setLastView(e);
+    localStorage.setItem("lastView", e);
   };
   return (
     <div className="calendar-screen">
@@ -64,6 +71,7 @@ const CalendarScreen = () => {
         components={{ event: CalendarEvent }}
         onView={onViewChange}
         onDoubleClickEvent={onDoubleClick}
+        view={lastView}
         onSelectEvent={onSelectedEvent}
       />
     </div>
