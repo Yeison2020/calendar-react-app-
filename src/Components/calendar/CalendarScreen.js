@@ -4,6 +4,7 @@ import CalendarEvent from "./CalendarEvent";
 import "../../index.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+import CalendarModal from "./CalendarModal";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { messages } from "../../helpers/calendar-messages-es";
@@ -74,6 +75,7 @@ const CalendarScreen = () => {
         view={lastView}
         onSelectEvent={onSelectedEvent}
       />
+      <CalendarModal />
     </div>
   );
 };
