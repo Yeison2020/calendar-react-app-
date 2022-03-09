@@ -15,12 +15,15 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const CalendarModal = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(true);
+  const closeModal = () => {
+    console.log("closing...");
+  };
   return (
     <Modal
       isOpen={modalIsOpen}
+      onRequestClose={closeModal}
       // onAfterOpen={afterOpenModal}
-      // onRequestClose={closeModal}
       style={customStyles}
       contentLabel="Example Modal"
     >
