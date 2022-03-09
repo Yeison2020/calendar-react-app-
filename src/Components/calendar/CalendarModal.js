@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
+import "./modal.css";
 
 const customStyles = {
   content: {
@@ -28,6 +29,8 @@ const CalendarModal = () => {
       // onAfterOpen={afterOpenModal}
       style={customStyles}
       contentLabel="Example Modal"
+      className="modal"
+      overlayClassName="modal-fondo"
     >
       <h1>Hello World</h1>
       <hr />
