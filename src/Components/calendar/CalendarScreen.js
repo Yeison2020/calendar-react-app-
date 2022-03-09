@@ -13,11 +13,14 @@ const localizer = momentLocalizer(moment);
 const events = [
   {
     title: "Learn React Today",
-    name: "Yeison",
     start: moment().toDate(),
     end: moment().add(2, "hours").toDate(),
     bgcolor: "#fafafa",
     notes: "Comprar cake",
+    user: {
+      _id: 123,
+      name: "Yeison",
+    },
   },
 ];
 
