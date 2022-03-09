@@ -26,7 +26,7 @@ const events = [
 
 const CalendarScreen = () => {
   const eventStyleGetter = (event, start, end, isSeleected) => {
-    console.log(event, start, end, isSeleected);
+    // console.log(event, start, end, isSeleected);
     const style = {
       backgroundColor: "#367CF7",
       borderRadius: "0px",
@@ -39,6 +39,18 @@ const CalendarScreen = () => {
       style,
     };
   };
+
+  // Here those events help me to extract my current location or If I'm editing my files at that location.
+  const onDoubleClick = (e) => {
+    console.log(e);
+  };
+  const onSelectedEvent = (e) => {
+    console.log(e);
+  };
+
+  const onViewChange = (e) => {
+    console.log(e);
+  };
   return (
     <div className="calendar-screen">
       <NavBar />
@@ -50,6 +62,9 @@ const CalendarScreen = () => {
         messages={messages}
         eventPropGetter={eventStyleGetter}
         components={{ event: CalendarEvent }}
+        onView={onViewChange}
+        onDoubleClickEvent={onDoubleClick}
+        onSelectEvent={onSelectedEvent}
       />
     </div>
   );
