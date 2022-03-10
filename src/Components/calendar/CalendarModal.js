@@ -19,13 +19,22 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const now_Hoy = moment().minutes(0).seconds(0).add(1, "hours");
+
+// Here I can add two day ahead of my current day Love Moment Library
+const endDate = moment().minutes(0).seconds(0).add(1, "hours");
 const CalendarModal = () => {
   // const [isOpen, setIsOpen] = useState(true);
   const [dateStart, setDateStart] = useState(now_Hoy.toDate());
+  const [endDatePicked, setEndDatePicked] = useState(endDate.toDate());
 
   const handleStartDateChange = (e) => {
     setDateStart(e);
     console.log(e);
+  };
+
+  const handleEndDatpicked = (e) => {
+    console.log(e);
+    setEndDatePicked(e);
   };
 
   const closeModal = () => {
@@ -52,13 +61,17 @@ const CalendarModal = () => {
             onChange={handleStartDateChange}
             value={dateStart}
             className="react-datetime-picker react-datetime-picker_wrapper form-control"
-            placeholder="Fecha inicio"
           />
         </div>
 
         <div className="form-group">
           <label>Fecha y hora fin</label>
-          <input className="form-control" placeholder="Fecha inicio" />
+          <label>Fecha y hora inicio</label>{" "}
+          <DateTimePicker
+            onChange={handleEndDatpicked}
+            value={endDatePicked}
+            className="react-datetime-picker react-datetime-picker_wrapper form-control"
+          />
         </div>
 
         <hr />
