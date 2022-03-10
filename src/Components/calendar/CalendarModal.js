@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2";
+
 import Modal from "react-modal";
 import DateTimePicker from "react-datetime-picker";
 import "./modal.css";
@@ -70,7 +72,12 @@ const CalendarModal = () => {
     e.preventDefault();
     const momentStar = moment(start);
     const momentEnd = moment(end);
-    console.log(momentStar, momentEnd);
+
+    // isBefore or isAfter methods under moment.
+    if (momentStar.isSameOrAfter(momentEnd)) {
+      Swal.fire("Error", "Last Date should be higher than first date", "error");
+      console.log("Date two should be higher that first Date");
+    }
     console.log(formValues);
   };
   return (
