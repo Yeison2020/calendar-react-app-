@@ -65,6 +65,11 @@ const CalendarModal = () => {
     // setIsOpen(false);
     console.log("closing...");
   };
+
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+    console.log(formValues);
+  };
   return (
     <Modal
       isOpen={true}
@@ -78,7 +83,7 @@ const CalendarModal = () => {
     >
       <h1> Nuevo evento </h1>
       <hr />
-      <form className="container">
+      <form className="container" onSubmit={handleSubmitForm}>
         <div className="form-group">
           <label>Fecha y hora inicio</label>{" "}
           <DateTimePicker
