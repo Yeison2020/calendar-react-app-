@@ -18,3 +18,14 @@ body {
 .rbc-calendar {
   height: 100%;
 }
+
+/* Date picker styles */
+
+.react-datetime-picker input:focus {
+  outline: none;
+}
+
+.react-datetime-picker_wrapper {
+  border: 0px solid gray !important;
+  flex-grow: 1;
+}
