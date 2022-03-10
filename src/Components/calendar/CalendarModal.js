@@ -35,7 +35,7 @@ const CalendarModal = () => {
     end: endDate.toDate(),
   });
 
-  const { title, notes } = formValues;
+  const { title, notes, start, end } = formValues;
   const handleInputChange = ({ target }) => {
     setFormValues({
       ...formValues,
@@ -68,6 +68,9 @@ const CalendarModal = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+    const momentStar = moment(start);
+    const momentEnd = moment(end);
+    console.log(momentStar, momentEnd);
     console.log(formValues);
   };
   return (
