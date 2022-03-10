@@ -19,9 +19,11 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const now_Hoy = moment().minutes(0).seconds(0).add(1, "hours");
+// Created a clone of my initial time
+const endDate = now_Hoy.clone().add(1, "hours");
 
 // Here I can add two day ahead of my current day Love Moment Library
-const endDate = moment().minutes(0).seconds(0).add(1, "hours");
+// const endDate = moment().minutes(0).seconds(0).add(1, "hours");
 const CalendarModal = () => {
   // const [isOpen, setIsOpen] = useState(true);
   const [dateStart, setDateStart] = useState(now_Hoy.toDate());
