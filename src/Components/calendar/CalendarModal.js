@@ -72,6 +72,7 @@ const CalendarModal = () => {
           <DateTimePicker
             onChange={handleEndDatpicked}
             value={endDatePicked}
+            minDate={dateStart}
             className="react-datetime-picker react-datetime-picker_wrapper form-control"
           />
         </div>

@@ -27,6 +27,5 @@ body {
 
 .react-datetime-picker_wrapper {
   border: 0px solid gray !important;
-
   flex-grow: 1;
 }
