@@ -44,11 +44,19 @@ const CalendarModal = () => {
   };
 
   const handleStartDateChange = (e) => {
+    setFormValues({
+      ...formValues,
+      start: e,
+    });
     setDateStart(e);
     console.log(e);
   };
 
   const handleEndDatpicked = (e) => {
+    setFormValues({
+      ...formValues,
+      end: e,
+    });
     console.log(e);
     setEndDatePicked(e);
   };
