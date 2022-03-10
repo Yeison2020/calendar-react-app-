@@ -30,6 +30,7 @@ const CalendarModal = () => {
   // const [isOpen, setIsOpen] = useState(true);
   const [dateStart, setDateStart] = useState(now_Hoy.toDate());
   const [endDatePicked, setEndDatePicked] = useState(endDate.toDate());
+  const [titleValid, setTitleValid] = useState(true);
   const [formValues, setFormValues] = useState({
     title: "Evento",
     notes: "",
@@ -76,8 +77,14 @@ const CalendarModal = () => {
     // isBefore or isAfter methods under moment.
     if (momentStar.isSameOrAfter(momentEnd)) {
       Swal.fire("Error", "Last Date should be higher than first date", "error");
-      console.log("Date two should be higher that first Date");
     }
+    if (title.trim().length < 2) {
+      setTitleValid(false);
+    }
+    setTitleValid(true);
+    closeModal();
+
+    // TODO: ADD TO DATABASE INFORMATION
     console.log(formValues);
   };
   return (
@@ -119,7 +126,7 @@ const CalendarModal = () => {
           <label>Titulo y notas</label>
           <input
             type="text"
-            className="form-control"
+            className={`form-control ${!titleValid && "is-invalid"}`}
             name="title"
             autoComplete="off"
             value={title}
