@@ -65,6 +65,7 @@ const CalendarModal = () => {
   };
 
   const closeModal = () => {
+    // TODO NEED TO CLOSE MODAL AND HANDLE THIS USING THE STATE IsOpen THAT IS BEEN PASS AS A PROP
     // setIsOpen(false);
     console.log("closing...");
   };
