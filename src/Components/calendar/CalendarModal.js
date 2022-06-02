@@ -30,7 +30,7 @@ const CalendarModal = () => {
   // const [isOpen, setIsOpen] = useState(true);
   const [dateStart, setDateStart] = useState(now_Hoy.toDate());
   const [endDatePicked, setEndDatePicked] = useState(endDate.toDate());
-  const [titleValid, setTitleValid] = useState(true);
+  const [titleValid, setTitleValid] = useState(false);
   const [formValues, setFormValues] = useState({
     title: "Evento",
     notes: "",
